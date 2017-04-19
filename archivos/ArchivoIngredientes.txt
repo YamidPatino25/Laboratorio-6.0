@@ -1,0 +1,12 @@
+Camaron,30
+Arroz,50
+Carne,50
+Queso,50
+Lenteja,50
+Platano,50
+Azucar,50
+Melocoton,34
+Leche,23
+Pansa,34
+Filete,616
+Guayaba,33
