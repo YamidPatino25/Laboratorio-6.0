@@ -38,7 +38,7 @@ public class Principal extends javax.swing.JFrame {
     public static String Pedido;
     public static String beb;
     public static String postre;
-    
+
     public Principal() {
         initComponents();
         ptrPlatos = null;
@@ -47,8 +47,24 @@ public class Principal extends javax.swing.JFrame {
 
     }
 
-    public void setPtrPlatos(NodoIng ptr) {
+    public void getPtrPlatos(NodoIng ptr) {
         this.ptrPlatos = ptr;
+
+    }
+    
+
+    public File getArchivoIngrediente() {
+
+        return this.archivo;
+    }
+
+    public File getArchivoPostre() {
+
+        return this.archivoPostres;
+    }
+
+    public File getArchivobebida() {
+        return this.archivoBebidas;
 
     }
 
@@ -84,6 +100,7 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         Cocina = new javax.swing.JFrame();
+        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -91,7 +108,7 @@ public class Principal extends javax.swing.JFrame {
         jButton13 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         pedidosTable = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
         Add = new javax.swing.JFrame();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
@@ -103,6 +120,7 @@ public class Principal extends javax.swing.JFrame {
         jButton21 = new javax.swing.JButton();
         lbltipo = new javax.swing.JLabel();
         lblcolumna = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
         Menu = new javax.swing.JFrame();
         jScrollPane3 = new javax.swing.JScrollPane();
         listaPlatos = new javax.swing.JTable();
@@ -117,6 +135,7 @@ public class Principal extends javax.swing.JFrame {
         jButton18 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
+        jLabel30 = new javax.swing.JLabel();
         JefeDeCocina = new javax.swing.JFrame();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -170,19 +189,28 @@ public class Principal extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         txtprecio = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
         Cocinar = new javax.swing.JFrame();
         jLabel7 = new javax.swing.JLabel();
         jButton11 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         lblpedido = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel23 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         Cocina.setMinimumSize(new java.awt.Dimension(516, 430));
         Cocina.setResizable(false);
+        Cocina.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("COCINA");
+        Cocina.getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 100, 24));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -229,12 +257,14 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jButton4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addComponent(jButton6)
                 .addGap(18, 18, 18)
                 .addComponent(jButton5)
                 .addGap(20, 20, 20))
         );
+
+        Cocina.getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 67, -1, -1));
 
         pedidosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -272,51 +302,35 @@ public class Principal extends javax.swing.JFrame {
             pedidosTable.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        jLabel1.setFont(new java.awt.Font("SWMono", 1, 18)); // NOI18N
-        jLabel1.setText("COCINA");
+        Cocina.getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 67, 275, 110));
 
-        javax.swing.GroupLayout CocinaLayout = new javax.swing.GroupLayout(Cocina.getContentPane());
-        Cocina.getContentPane().setLayout(CocinaLayout);
-        CocinaLayout.setHorizontalGroup(
-            CocinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CocinaLayout.createSequentialGroup()
-                .addGroup(CocinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(CocinaLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(CocinaLayout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addComponent(jLabel1)))
-                .addContainerGap(61, Short.MAX_VALUE))
-        );
-        CocinaLayout.setVerticalGroup(
-            CocinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CocinaLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(CocinaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(CocinaLayout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(185, 185, 185))
-                    .addGroup(CocinaLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondox.net_fondo-con-lineas-azules_1728x1080.jpg"))); // NOI18N
+        jLabel28.setText("jLabel28");
+        Cocina.getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 520));
 
         Add.setMinimumSize(new java.awt.Dimension(354, 284));
         Add.setResizable(false);
+        Add.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("Agregar Pedido");
+        Add.getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
 
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("Cantidad:");
+        Add.getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 107, -1, -1));
 
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("Mesa:");
+        Add.getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 140, -1, -1));
 
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("Mesero:");
+        Add.getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 171, -1, -1));
+        Add.getContentPane().add(spin, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 104, -1, -1));
+        Add.getContentPane().add(txtMesa, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 137, 41, -1));
+        Add.getContentPane().add(txtMesero, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 168, 41, -1));
 
         jButton21.setText("Agregar Pedido");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
@@ -324,68 +338,24 @@ public class Principal extends javax.swing.JFrame {
                 jButton21ActionPerformed(evt);
             }
         });
+        Add.getContentPane().add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 103, -1, -1));
 
+        lbltipo.setForeground(new java.awt.Color(255, 255, 255));
         lbltipo.setText("jLabel7");
+        Add.getContentPane().add(lbltipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, -1, -1));
 
+        lblcolumna.setForeground(new java.awt.Color(255, 255, 255));
         lblcolumna.setText("jLabel7");
+        Add.getContentPane().add(lblcolumna, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, -1, -1));
 
-        javax.swing.GroupLayout AddLayout = new javax.swing.GroupLayout(Add.getContentPane());
-        Add.getContentPane().setLayout(AddLayout);
-        AddLayout.setHorizontalGroup(
-            AddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AddLayout.createSequentialGroup()
-                .addGroup(AddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AddLayout.createSequentialGroup()
-                        .addGap(87, 87, 87)
-                        .addComponent(jLabel24))
-                    .addGroup(AddLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addGroup(AddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel26)
-                            .addComponent(jLabel25)
-                            .addComponent(jLabel27))
-                        .addGap(10, 10, 10)
-                        .addGroup(AddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtMesa, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtMesero, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(spin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(39, 39, 39)
-                        .addComponent(jButton21))
-                    .addGroup(AddLayout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(lbltipo)
-                        .addGap(29, 29, 29)
-                        .addComponent(lblcolumna)))
-                .addContainerGap(87, Short.MAX_VALUE))
-        );
-        AddLayout.setVerticalGroup(
-            AddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AddLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel24)
-                .addGap(18, 18, 18)
-                .addGroup(AddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbltipo)
-                    .addComponent(lblcolumna))
-                .addGap(26, 26, 26)
-                .addGroup(AddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel25)
-                    .addComponent(spin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton21))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(AddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
-                    .addComponent(txtMesa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(AddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel27)
-                    .addComponent(txtMesero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(98, Short.MAX_VALUE))
-        );
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/f3df92c17f5c1cc3209e60bc3831f3df.jpg"))); // NOI18N
+        jLabel31.setText("jLabel31");
+        Add.getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 450));
 
         Menu.setFocusCycleRoot(false);
         Menu.setMinimumSize(new java.awt.Dimension(590, 360));
         Menu.setResizable(false);
+        Menu.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         listaPlatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -421,8 +391,12 @@ public class Principal extends javax.swing.JFrame {
             listaPlatos.getColumnModel().getColumn(1).setResizable(false);
         }
 
+        Menu.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 78, 161, 107));
+
         jLabel6.setFont(new java.awt.Font("SWMono", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("BIENVENIDO AL RESTAURANTE DE TUS PESADILLAS");
+        Menu.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 19, -1, -1));
 
         bebidasTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -458,6 +432,8 @@ public class Principal extends javax.swing.JFrame {
             bebidasTable.getColumnModel().getColumn(1).setResizable(false);
         }
 
+        Menu.getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 78, 173, 107));
+
         postresTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -491,6 +467,8 @@ public class Principal extends javax.swing.JFrame {
             postresTable.getColumnModel().getColumn(0).setResizable(false);
             postresTable.getColumnModel().getColumn(1).setResizable(false);
         }
+
+        Menu.getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 78, 159, 107));
 
         jPanel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -529,12 +507,15 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
+        Menu.getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+
         jButton18.setText("Actualizar Bebidas");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton18ActionPerformed(evt);
             }
         });
+        Menu.getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 49, 173, -1));
 
         jButton19.setText("Ver Platos");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
@@ -542,6 +523,7 @@ public class Principal extends javax.swing.JFrame {
                 jButton19ActionPerformed(evt);
             }
         });
+        Menu.getContentPane().add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 49, 161, -1));
 
         jButton20.setText("Actualizar Postres");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
@@ -549,53 +531,11 @@ public class Principal extends javax.swing.JFrame {
                 jButton20ActionPerformed(evt);
             }
         });
+        Menu.getContentPane().add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(396, 49, 159, -1));
 
-        javax.swing.GroupLayout MenuLayout = new javax.swing.GroupLayout(Menu.getContentPane());
-        Menu.getContentPane().setLayout(MenuLayout);
-        MenuLayout.setHorizontalGroup(
-            MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MenuLayout.createSequentialGroup()
-                .addGroup(MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MenuLayout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                            .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(26, 26, 26)
-                        .addGroup(MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
-                            .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(10, 10, 10)
-                        .addGroup(MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)))
-                    .addGroup(MenuLayout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(jLabel6))
-                    .addGroup(MenuLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(42, Short.MAX_VALUE))
-        );
-        MenuLayout.setVerticalGroup(
-            MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MenuLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton18)
-                    .addComponent(jButton19)
-                    .addComponent(jButton20))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
-        );
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/f3df92c17f5c1cc3209e60bc3831f3df.jpg"))); // NOI18N
+        jLabel30.setText("jLabel30");
+        Menu.getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 420));
 
         JefeDeCocina.setMinimumSize(new java.awt.Dimension(400, 302));
         JefeDeCocina.setResizable(false);
@@ -849,6 +789,7 @@ public class Principal extends javax.swing.JFrame {
 
         AgregarPlatos.setMinimumSize(new java.awt.Dimension(570, 535));
         AgregarPlatos.setResizable(false);
+        AgregarPlatos.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         listaIngredientes2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -879,10 +820,16 @@ public class Principal extends javax.swing.JFrame {
             listaIngredientes2.getColumnModel().getColumn(1).setResizable(false);
         }
 
+        AgregarPlatos.getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 229, 141));
+
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Ingredientes actuales:");
+        AgregarPlatos.getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("AGREGAR PLATO");
+        AgregarPlatos.getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
 
         jPanel9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -935,6 +882,8 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jButton16)
                 .addContainerGap(55, Short.MAX_VALUE))
         );
+
+        AgregarPlatos.getContentPane().add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(353, 68, -1, -1));
 
         jPanel10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -1062,44 +1011,11 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout AgregarPlatosLayout = new javax.swing.GroupLayout(AgregarPlatos.getContentPane());
-        AgregarPlatos.getContentPane().setLayout(AgregarPlatosLayout);
-        AgregarPlatosLayout.setHorizontalGroup(
-            AgregarPlatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AgregarPlatosLayout.createSequentialGroup()
-                .addGroup(AgregarPlatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AgregarPlatosLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel11))
-                    .addGroup(AgregarPlatosLayout.createSequentialGroup()
-                        .addGap(194, 194, 194)
-                        .addComponent(jLabel12))
-                    .addGroup(AgregarPlatosLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(AgregarPlatosLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(57, Short.MAX_VALUE))
-        );
-        AgregarPlatosLayout.setVerticalGroup(
-            AgregarPlatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AgregarPlatosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel12)
-                .addGap(35, 35, 35)
-                .addGroup(AgregarPlatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AgregarPlatosLayout.createSequentialGroup()
-                        .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel11))
-                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(94, Short.MAX_VALUE))
-        );
+        AgregarPlatos.getContentPane().add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 68, -1, -1));
+
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue-hd-background-wallpaper-1735.jpg"))); // NOI18N
+        jLabel32.setText("jLabel32");
+        AgregarPlatos.getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 610));
 
         Cocinar.setMinimumSize(new java.awt.Dimension(355, 243));
 
@@ -1162,62 +1078,49 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(79, Short.MAX_VALUE))
         );
 
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo_hd_169_tablas_azules_madera.jpg"))); // NOI18N
+        jLabel29.setText("jLabel29");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(511, 160));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setForeground(new java.awt.Color(102, 153, 255));
         jButton1.setText("Cocina");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 84, 132, -1));
 
+        jButton2.setForeground(new java.awt.Color(102, 153, 255));
         jButton2.setText("Menu");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 84, 134, -1));
 
+        jButton3.setForeground(new java.awt.Color(102, 153, 255));
         jButton3.setText("Salir");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 84, 127, -1));
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("RESTAURANTE LA PROSPERIDAD");
+        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel23))
-                .addContainerGap(57, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel23)
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addContainerGap(62, Short.MAX_VALUE))
-        );
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/blue-hd-background-wallpaper-1735.jpg"))); // NOI18N
+        jLabel9.setText("jLabel9");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 170));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1291,20 +1194,12 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        
-      //Buscar si hay algun pedido seleccionado
-      
-      int fila = pedidosTable.getRowCount();
+
+        //Buscar si hay algun pedido seleccionado
+        int fila = pedidosTable.getRowCount();
         System.out.println(fila);
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void btnActualizarIngActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarIngActionPerformed
@@ -1563,8 +1458,6 @@ public class Principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton19ActionPerformed
 
-    
-
     public static String getBeb() {
         return beb;
     }
@@ -1577,9 +1470,9 @@ public class Principal extends javax.swing.JFrame {
         if (evt.getClickCount() == 2) {
             lbltipo.setText("Bebidas");
             String columna = String.valueOf(bebidasTable.getSelectedRow());
-            lblcolumna.setText(columna);        
+            lblcolumna.setText(columna);
             Add.setVisible(true);
-            
+
         }
     }//GEN-LAST:event_bebidasTableMouseClicked
 
@@ -1594,8 +1487,8 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_listaPlatosMouseClicked
 
     private void postresTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_postresTableMouseClicked
-       if (evt.getClickCount() == 2) {
-           lbltipo.setText("Postres");
+        if (evt.getClickCount() == 2) {
+            lbltipo.setText("Postres");
             String columna = String.valueOf(postresTable.getSelectedRow());
             lblcolumna.setText(columna);
             Add.setVisible(true);
@@ -1603,37 +1496,39 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_postresTableMouseClicked
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-         
+
         if (!txtMesa.getText().equals("") && !txtMesero.getText().equals("") && Integer.parseInt(spin.getValue().toString()) > 0) {
             try {
-                
+
                 //ME AYUDO DE LOS LABELS QUE PUSE
                 int cant = Integer.parseInt(spin.getValue().toString());
                 int row = Integer.parseInt(lblcolumna.getText());
                 String tipo = lbltipo.getText();
                 if (tipo.equals("Bebidas")) {
                     //Obtengo valores de la lista
-                    
-                    
+
+                    String tipoPedido = "Bebida";
                     String bebida = bebidasTable.getValueAt(row, 0).toString();
                     int precio = Integer.parseInt(bebidasTable.getValueAt(row, 1).toString());
-                    controlador.tomarPedido(bebida, precio, cant, txtMesa.getText(), txtMesero.getText(), ptrPedidos);
+                    controlador.tomarPedido(tipoPedido, bebida, precio, cant, txtMesa.getText(), txtMesero.getText(), ptrPedidos);
                     ptrPedidos = controlador.getPtrPedido();
                     System.out.println("Esta funcionando");
                     mostrarLista(ptrPedidos, pedidosTable);
                     //Llamo la funcion agregar pedido
                 } else if (tipo.equals("Postres")) {
 
+                    String tipoPedido = "Postre";
                     String postre = postresTable.getValueAt(row, 0).toString();
                     int precio = Integer.parseInt(postresTable.getValueAt(row, 1).toString());
-                    controlador.tomarPedido(postre, precio, cant, txtMesa.getText(), txtMesero.getText(), ptrPedidos);
+                    controlador.tomarPedido(tipoPedido, postre, precio, cant, txtMesa.getText(), txtMesero.getText(), ptrPedidos);
                     ptrPedidos = controlador.getPtrPedido();
                     mostrarLista(ptrPedidos, pedidosTable);
 
                 } else if (tipo.equals("Platos")) {
+                    String tipoPedido = "Plato";
                     String plato = listaPlatos.getValueAt(row, 0).toString();
                     int precio = Integer.parseInt(listaPlatos.getValueAt(row, 1).toString());
-                    controlador.tomarPedido(plato, precio, cant, txtMesa.getText(), txtMesero.getText(), ptrPedidos);
+                    controlador.tomarPedido(tipoPedido, plato, precio, cant, txtMesa.getText(), txtMesero.getText(), ptrPedidos);
                     ptrPedidos = controlador.getPtrPedido();
                     mostrarLista(ptrPedidos, pedidosTable);
                 } else {
@@ -1660,44 +1555,39 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void pedidosTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedidosTableMouseClicked
-        
+
         if (evt.getClickCount() == 2) {
-            
-            
+
             //Pedido = pedidosTable.getValueAt(fila, 0).toString();
-            int v=pedidosTable.getSelectedRow();
-            lblpedido.setText(pedidosTable.getValueAt(v,0).toString());
+            int v = pedidosTable.getSelectedRow();
+            lblpedido.setText(pedidosTable.getValueAt(v, 0).toString());
             Cocinar.setVisible(true);
-            
+
         }
-        
-        
+
+
     }//GEN-LAST:event_pedidosTableMouseClicked
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
 
-      //OBTENGO LA FILA SELECCIONADA  
-      int v=pedidosTable.getSelectedRow(); 
-      
-      //OBTENGO LOS DATOS PARA PASAR A COCINAR
-      
-      String pedido = pedidosTable.getValueAt(v, 0).toString();
-      int cant = Integer.parseInt(pedidosTable.getValueAt(v, 1).toString());
-      String mesero = pedidosTable.getValueAt(v,2).toString();
-      String mesa = pedidosTable.getValueAt(v,3).toString();
+        //OBTENGO LA FILA SELECCIONADA  
+        int v = pedidosTable.getSelectedRow();
 
-      //PASO A LAS FUNCIONES DEL CONTROLADOR PARA AGREGAR A LA LISTA DE FACTURAS
-      
-      
-      controlador.cocinar(pedido, cant, mesero, mesa, ptrFacturas, ptrPedidos);
-      ptrPedidos = controlador.getPtrPedido();
-      
-      mostrarLista(ptrPedidos, pedidosTable);
-      
-      Cocinar.setVisible(false);
-      
-      
-      
+        //OBTENGO LOS DATOS PARA PASAR A COCINAR
+        String pedido = pedidosTable.getValueAt(v, 0).toString();
+        int cant = Integer.parseInt(pedidosTable.getValueAt(v, 1).toString());
+        String mesero = pedidosTable.getValueAt(v, 2).toString();
+        String mesa = pedidosTable.getValueAt(v, 3).toString();
+
+        //PASO A LAS FUNCIONES DEL CONTROLADOR PARA AGREGAR A LA LISTA DE FACTURAS
+        controlador.cocinar(pedido, cant, mesero, mesa, ptrFacturas, ptrPedidos);
+        ptrPedidos = controlador.getPtrPedido();
+        this.ptrFacturas = controlador.getPtrFacturas();
+        mostrarLista(ptrPedidos, pedidosTable);
+
+        Cocinar.setVisible(false);
+
+
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
@@ -1755,7 +1645,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JFrame IngresarIngrediente;
     private javax.swing.JFrame JefeDeCocina;
     private javax.swing.JFrame Menu;
-    private javax.swing.JTable bebidasTable;
+    public javax.swing.JTable bebidasTable;
     private javax.swing.JButton btnActualizarIng;
     private javax.swing.JFileChooser fc;
     private javax.swing.JButton jButton1;
@@ -1801,12 +1691,18 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;

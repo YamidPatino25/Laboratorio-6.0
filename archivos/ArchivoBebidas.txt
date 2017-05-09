@@ -1,5 +1,5 @@
-Coca Cola,2500
-Seven Up,2500
-Te Helado,3000
-Agua,2000
-Corozo,4000
+Coca Cola,2500,50
+Seven Up,2500,50
+Te Helado,3000,50
+Agua,2000,50
+Corozo,4000,50

@@ -15,7 +15,7 @@ public class Camarero {
 
     }
 
-    public NodoPed agregarPedido(String pedido, int precio, int cantidad, String mesa, String mesero, NodoPed ptrPedidos) {
+    public NodoPed agregarPedido(String tipoPedido, String pedido, int precio, int cantidad, String mesa, String mesero, NodoPed ptrPedidos) {
 
         NodoPed p = new NodoPed();
         p.Pedido = pedido;
@@ -23,6 +23,7 @@ public class Camarero {
         p.mesa = mesa;
         p.mesero = mesero;
         p.precio = precio;
+       
 
         if (ptrPedidos == null) {
             ptrPedidos = p;

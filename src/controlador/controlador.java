@@ -44,8 +44,8 @@ public class controlador {
         return this.ptr;
     }
 
-    public void tomarPedido(String pedido, int precio, int cantidad, String mesa, String mesero, NodoPed ptrPedidos) {
-        this.ptrPedidos = camarero.agregarPedido(pedido, precio, cantidad, mesa, mesero, ptrPedidos);
+    public void tomarPedido(String tipoPedido, String pedido, int precio, int cantidad, String mesa, String mesero, NodoPed ptrPedidos) {
+        this.ptrPedidos = camarero.agregarPedido(tipoPedido, pedido, precio, cantidad, mesa, mesero, ptrPedidos);
 
     }
 
@@ -53,11 +53,16 @@ public class controlador {
 
         return this.ptrPedidos;
     }
+    public NodoPed getPtrFacturas(){
+        
+        return this.ptrFacturas;
+    }
 
     public void cocinar(String pedido, int cant, String mesero, String mesa, NodoPed ptrFacturas, NodoPed ptrPedidos) {
 
         this.ptrFacturas = cocinero.agregarPedido(pedido, cant, mesero, mesa, ptrFacturas);
         this.ptrPedidos = eliminarPedido(ptrPedidos, pedido, mesero, mesa, cant);
+        
 
     }
 
